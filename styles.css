@@ -4,18 +4,21 @@ html {
 }
 
 body {
-    background-color:darkblue;
+    background-color: darkblue;
     height: 100vh;
     margin: 0;
     color: white;
+    display: flex; /* Convertimos el body en un contenedor flex */
+    justify-content: center; /* Centramos horizontalmente */
+    align-items: center; /* Centramos verticalmente */
 }
-
 
 .list {
     transform-style: preserve-3d;
     transform: perspective(1000px);
     display: inline-flex;
     width: 60%;
+    justify-content: center; /* Ajusta la distribución interna de los elementos */
 }
 
 .list .item {
