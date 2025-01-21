@@ -6,7 +6,8 @@
     <title>Inicio</title>
     <link rel="stylesheet" href="../css/styles.css">
 </head>
-<body>
+<body style="display: flex; flex-direction: column;">
+    <h1 style="width: 40%; text-align: center; margin-bottom: 10px;">PORTAFOLIO DE TECNOLOGÍAS DE LA INFORMACIÓN GEOGRÁFICA</h1>
     <div class="list">
         <div class="item" onclick="openPractice(1)"><img src="../Practica1.png" alt="Practica 1"> <span class="p-name">Práctica 1</span></div>
         <div class="item" onclick="openPractice(3)"><img src="../Practica3.png" alt="Practica 3"> <span class="p-name">Práctica 3</span></div>
@@ -17,10 +18,13 @@
         <div class="item" onclick="openPractice(10)"><img src="../Practica10.jpg" alt="Practica 10"> <span class="p-name">Práctica 10</span></div>
     </div>
 
+    <h3 style="text-align: center; margin-top: 90px; font-weight: 400;">Hecho por: Mario Luis Mesa, Andrés Catala Martínez y Javier Camarena Cuartero</h3>
+
     <script>
         function openPractice(numero) {
             window.location.href = `practica${numero}.html`;
         }
     </script>
+    <script src="../js/transition.js"></script>
 </body>
 </html>
