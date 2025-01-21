@@ -7,29 +7,27 @@
     <link rel="stylesheet" href="../css/practica.css">
 </head>
 <body>
-    <!-- Header desplegable -->
-    <div class="header-container">
-        <div class="header">
-            <button id="anterior" onclick="navigate(-1)">Anterior</button>
-            <button onclick="goHome()">Inicio</button>
-            <button id="siguiente" onclick="navigate(1)">Siguiente</button>
-        </div>
-        <div class="header-indicator">▼</div> <!-- Indicador de flecha hacia abajo -->
+<!-- Header desplegable -->
+<div class="header-container">
+    <div class="header">
+        <button id="anterior" onclick="navigate(-1)">Anterior</button>
+        <button onclick="goHome()">Inicio</button>
+        <button id="siguiente" onclick="navigate(1)">Siguiente</button>
     </div>
+    <div class="header-indicator">▼</div>
+</div>
 
-    <!-- Contenido de la práctica -->
-    <div class="content">
-        <div class="content-box" id="contenidoPractica">
-            <h1>Práctica X</h1>
-
-        </div>
+<!-- Contenido de la práctica -->
+<div class="content">
+    <div class="content-box" id="contenidoPractica">
     </div>
+</div>
 
-    <!-- Nombre y botón debajo del contenido -->
-    <div class="practice-info">
-        <span id="nombrePractica">Práctica 8</span>
-        <button onclick="descargarGuion()">Descargar Guion</button>
-    </div>
+<!-- Nombre y botón debajo del contenido -->
+<div class="practice-info">
+    <span id="nombrePractica">Práctica 8</span>
+    <button onclick="descargarGuion()">Descargar Guión<img src="../download-minimalistic-svgrepo-com.svg"></button>
+</div>
 
     <script>
         function navigate(step) {
