@@ -10,9 +10,21 @@ const totalPracticas = practicasDisponibles.length;
 const practicaIndex = practicasDisponibles.indexOf(numero); // Posición de la práctica en el array
 
 // Mostrar contenido dinámico
-document.getElementById('nombrePractica').innerText = `Práctica ${numero}`;
-document.querySelector('#contenidoPractica h1').innerText = `Práctica ${numero}`;
-document.querySelector('#contenidoPractica p').innerText = `Contenido de la práctica ${numero}.`;
+const nombrePracticaElement = document.getElementById('nombrePractica');
+if (nombrePracticaElement) {
+    nombrePracticaElement.innerText = `Práctica ${numero}`;
+}
+
+const h1Element = document.querySelector('#contenidoPractica h1');
+if (h1Element) {
+    h1Element.innerText = `Práctica ${numero}`;
+}
+
+const pElement = document.querySelector('#contenidoPractica p');
+if (pElement) {
+    pElement.innerText = `Contenido de la práctica ${numero}.`;
+}
+
 
 // Configurar botones de navegación
 const btnAnterior = document.getElementById('anterior');
