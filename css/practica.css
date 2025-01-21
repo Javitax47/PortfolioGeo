@@ -116,11 +116,8 @@ body {
 }
 
 .content-box {
-<<<<<<< HEAD
     display: flex;
     flex-direction: column;
-=======
->>>>>>> origin/master
     border: 2px solid var(--primary-color);
     border-radius: 12px;
     overflow: scroll;
