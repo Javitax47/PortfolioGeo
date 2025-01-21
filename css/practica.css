@@ -112,6 +112,10 @@ body {
     margin-right: auto;
 }
 
+.content-box {
+    overflow: scroll;
+}
+
 /* Información de la práctica (nombre y botón) */
 .practice-info {
     margin-top: 16px;
