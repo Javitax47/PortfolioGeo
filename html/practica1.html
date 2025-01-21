@@ -5,14 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Práctica</title>
     <link rel="stylesheet" href="../css/practica.css">
+    <link rel="script" href="../js/practica.js">
 </head>
 <body>
 <!-- Header desplegable -->
 <div class="header-container">
     <div class="header">
-        <button id="anterior" onclick="navigate(-1)">Anterior</button>
-        <button onclick="goHome()">Inicio</button>
-        <button id="siguiente" onclick="navigate(1)">Siguiente</button>
+            <button id="anterior" onclick="navigate(-1)">◄ Anterior</button>
+            <button onclick="goHome()" id="btn-inicio"><img src="../home-svgrepo-com.svg"></button>
+            <button id="siguiente" onclick="navigate(1)">Siguiente ►</button>
     </div>
     <div class="header-indicator">▼</div>
 </div>
