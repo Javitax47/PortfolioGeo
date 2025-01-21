@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Práctica</title>
+    <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/practica.css">
 </head>
 <body>
@@ -14,21 +15,19 @@
             <button onclick="goHome()">Inicio</button>
             <button id="siguiente" onclick="navigate(1)">Siguiente</button>
         </div>
-        <div class="header-indicator">▼</div> <!-- Indicador de flecha hacia abajo -->
+        <div class="header-indicator">▼</div>
     </div>
 
     <!-- Contenido de la práctica -->
     <div class="content">
         <div class="content-box" id="contenidoPractica">
-            <h1>Práctica X</h1>
-            <p>Este es el contenido de la práctica seleccionada.</p>
         </div>
     </div>
 
     <!-- Nombre y botón debajo del contenido -->
     <div class="practice-info">
         <span id="nombrePractica">Práctica X</span>
-        <button onclick="descargarGuion()">Descargar Guion</button>
+        <button onclick="descargarGuion()">Descargar Guión<img src="../download-minimalistic-svgrepo-com.svg"></button>
     </div>
 
     <script>
