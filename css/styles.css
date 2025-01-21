@@ -13,7 +13,20 @@ body {
   align-items: center; /* Centramos verticalmente */
 }
 
+body {
+  transition: opacity 0.5s ease-in-out;
+}
+
+body.fade-out {
+  opacity: 0;
+}
+
+body.fade-in {
+  opacity: 1;
+}
+
 .list {
+  margin-top: 80px;
   transform-style: preserve-3d;
   transform: perspective(1000px);
   display: inline-flex;

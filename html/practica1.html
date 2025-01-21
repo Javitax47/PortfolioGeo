@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Práctica</title>
+    <title>Práctica 1</title>
+    <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/practica.css">
-    <link rel="script" href="../js/practica.js">
 </head>
 <body>
 <!-- Header desplegable -->
@@ -20,7 +20,8 @@
 
 <!-- Contenido de la práctica -->
 <div class="content">
-    <div class="content-box" id="contenidoPractica">
+    <div class="content-box" style="height: fit-content;" id="contenidoPractica">
+        <img src="../Practica1.png" alt="Imagen Práctica 1">
     </div>
 </div>
 
@@ -43,11 +44,17 @@
 
         // Descargar guion
         function descargarGuion() {
+            console.log('Función descargarGuion ejecutada'); // Verifica si esto aparece en la consola
+
+
             const link = document.createElement('a');
-            link.href = `guiones/practica${numero}.pdf`;
-            link.download = `Practica${numero}_Guion.pdf`;
+            link.href = '../guiones/practica1.pdf';
+            console.log(link.href);
+            link.download = `Guion_Practica_1.pdf`;
             link.click();
         }
     </script>
+
+    <script src="../js/transition.js"></script>
 </body>
 </html>

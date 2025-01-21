@@ -122,6 +122,15 @@ body {
     overflow-y: scroll;
 }
 
+.content-box img {
+    width: fit-content;
+    height: auto;
+    max-height: 100%; 
+    object-fit: contain;
+    border-radius: 12px;
+    margin: 0 auto;
+}
+
 /* Información de la práctica (nombre y botón) */
 .practice-info {
     margin-top: 16px;
