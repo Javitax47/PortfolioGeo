@@ -119,7 +119,7 @@ body {
     display: flex;
     flex-direction: column;
     border-radius: 12px;
-    overflow: scroll;
+    overflow-y: scroll;
 }
 
 /* Información de la práctica (nombre y botón) */
