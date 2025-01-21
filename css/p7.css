@@ -24,6 +24,7 @@ tr:nth-child(even) {
 
 tr:nth-child(odd) {
     background-color: rgb(153, 197, 153);
+<<<<<<< HEAD
 }
 
 #grafico {
@@ -31,4 +32,6 @@ tr:nth-child(odd) {
     width: auto;
     margin: 20px auto;
     border-radius: 12px;
+=======
+>>>>>>> origin/master
 }
