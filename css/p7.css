@@ -1,18 +1,27 @@
+:root {
+    --primary-color: rgb(0, 40, 0);
+    --secondary-color: rgb(79, 150, 79);
+    --tertiary-color: rgb(39, 88, 39);
+}
+
 table {
     width: 100%;
     border-collapse: collapse;
+    color: white;
 }
 th, td {
-    border: 1px solid #ddd;
+    border: 1px solid var(--primary-color);
     padding: 8px;
     text-align: center;
 }
 th {
-    background-color: #f4f4f4;
+    background-color: var(--tertiary-color);
+    
 }
 tr:nth-child(even) {
-    background-color: #f9f9f9;
+    background-color: var(--secondary-color);
 }
-tr:hover {
-    background-color: #f1f1f1;
+
+tr:nth-child(odd) {
+    background-color: rgb(153, 197, 153);
 }
