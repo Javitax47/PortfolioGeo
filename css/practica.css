@@ -31,10 +31,12 @@ body {
 .header {
     background: var(--secondary-color);
     color: white;
-    padding: 10px 20px;
-    display: flex;
-    gap: 10px;
-    justify-content: center;
+    width: 400px;
+    padding: 10px 0;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    grid-template-rows: 1fr;
+    gap: 20px;
     align-items: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -44,10 +46,29 @@ body {
     color: var(--secondary-color);
     border: none;
     padding: 10px 15px;
+    margin: 0 10px;
     cursor: pointer;
     font-size: 16px;
     border-radius: 5px;
     transition: background 0.3s ease;
+}
+
+#btn-inicio {
+    background: none;
+    transition: .5s;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#btn-inicio:hover {
+    filter: brightness(0.8);
+}
+
+#btn-inicio img {
+    width: 25px;
+    height: 25px;
 }
 
 .header button:hover {
@@ -66,7 +87,7 @@ body {
     background: var(--secondary-color);
     color: white;
     font-size: 16px;
-    width: 100%;
+    width: 400px;
     text-align: center;
     padding: 2px 0;
     border-radius: 0 0 10px 10px;
