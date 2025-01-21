@@ -1,7 +1,19 @@
+:root {
+    --primary-color: rgb(0, 40, 0);
+    --secondary-color: rgb(79, 150, 79);
+    --tertiary-color: rgb(39, 88, 39);
+}
+
+
 /* Header oculto que se despliega */
+body {
+    display: block;
+    background-color: var(--primary-color);
+}
+
 .header-container {
     position: fixed;
-    top: -40px; /* Oculta parcialmente el header */
+    top: -55px; /* Oculta parcialmente el header */
     left: 50%;
     transform: translateX(-50%);
     width: auto;
@@ -17,9 +29,8 @@
 }
 
 .header {
-    background: #007bff;
+    background: var(--secondary-color);
     color: white;
-    border-radius: 10px;
     padding: 10px 20px;
     display: flex;
     gap: 10px;
@@ -30,7 +41,7 @@
 
 .header button {
     background: white;
-    color: #007bff;
+    color: var(--secondary-color);
     border: none;
     padding: 10px 15px;
     cursor: pointer;
@@ -40,7 +51,7 @@
 }
 
 .header button:hover {
-    background: #0056b3;
+    background: var(--tertiary-color);
     color: white;
 }
 
@@ -52,10 +63,12 @@
 
 /* Indicador de flecha hacia abajo */
 .header-indicator {
-    background: #007bff;
+    background: var(--secondary-color);
     color: white;
     font-size: 16px;
-    padding: 5px 10px;
+    width: 100%;
+    text-align: center;
+    padding: 2px 0;
     border-radius: 0 0 10px 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     cursor: pointer;
@@ -65,7 +78,7 @@
 /* Contenido */
 .content {
     margin-top: 60px; /* Deja espacio para el header */
-    width: 90%;
+    width: 80%;
     height: 70vh; /* Ocupa la mayor parte de la pantalla */
     background: #d4f8d4;
     border-radius: 10px;
@@ -80,26 +93,23 @@
 
 /* Información de la práctica (nombre y botón) */
 .practice-info {
-    margin-top: 20px;
-    width: 90%; /* Igual ancho que el contenido */
+    margin-top: 16px;
+    width: 80%; /* Igual ancho que el contenido */
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
-    background: #e5e5e5;
-    border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     margin-left: auto;
     margin-right: auto;
 }
 
 .practice-info span {
-    font-size: 18px;
+    font-size: 32px;
     font-weight: bold;
+    color: white;
 }
 
 .practice-info button {
-    background: #007bff;
+    background: var(--secondary-color);
     color: white;
     border: none;
     padding: 10px 15px;
@@ -107,8 +117,16 @@
     font-size: 16px;
     border-radius: 5px;
     transition: background 0.3s ease;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.practice-info button img {
+    width: 20px;
+    height: 20px;
 }
 
 .practice-info button:hover {
-    background: #0056b3;
+    background: var(--tertiary-color);
 }
