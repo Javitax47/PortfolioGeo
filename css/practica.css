@@ -4,6 +4,9 @@
     --tertiary-color: rgb(39, 88, 39);
 }
 
+html {
+    font-family: 'Roboto', sans-serif;
+}
 
 /* Header oculto que se despliega */
 body {
@@ -113,6 +116,10 @@ body {
 }
 
 .content-box {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid var(--primary-color);
+    border-radius: 12px;
     overflow: scroll;
 }
 
