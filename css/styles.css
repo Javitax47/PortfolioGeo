@@ -48,7 +48,7 @@ body.fade-in {
   height: 100%;
   background-color: white;
   transition: 0.5s;
-  filter: brightness(0);
+  filter: brightness(0.1);
   object-fit:cover
 }
 
