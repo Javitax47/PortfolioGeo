@@ -1,0 +1,27 @@
+#map_082e41690d595f71f8654863d01c45c4 {
+    position: relative;
+    width: 100.0%;
+    height: 100.0%;
+    left: 0.0%;
+    top: 0.0%;
+}
+.leaflet-container { font-size: 1rem; }
+.leaflet-image-layer {
+    /* old android/safari*/
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges; /* safari */
+    image-rendering: pixelated; /* chrome */
+    image-rendering: -moz-crisp-edges; /* firefox */
+    image-rendering: -o-crisp-edges; /* opera */
+    -ms-interpolation-mode: nearest-neighbor; /* ie */
+}
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+.content-box {
+    flex-grow: 1;
+    position: relative;
+}

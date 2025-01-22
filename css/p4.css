@@ -1,0 +1,25 @@
+#map_c5e9c551720d72f25a939b0e25b942ae {
+    position: relative;
+    width: 100.0%;
+    height: 100.0%;
+    left: 0.0%;
+    top: 0.0%;
+}
+.leaflet-container { font-size: 1rem; }
+
+.foliumpopup {
+    background-color: yellow;
+}
+.foliumpopup table{
+    margin: auto;
+}
+.foliumpopup tr{
+    text-align: left;
+}
+.foliumpopup th{
+    padding: 2px; padding-right: 8px;
+}
+.content-box {
+    flex-grow: 1;
+    position: relative;
+}

@@ -103,7 +103,7 @@ body {
 .content {
     margin-top: 60px; /* Deja espacio para el header */
     width: 80%;
-    height: 70vh; /* Ocupa la mayor parte de la pantalla */
+    height: 80vh; /* Ocupa la mayor parte de la pantalla */
     background: #d4f8d4;
     border-radius: 10px;
     padding: 20px;
