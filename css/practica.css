@@ -190,16 +190,7 @@ body {
     margin-top: 20px;
     text-align: center;
     padding: 10px;
-    background: #f4f4f4; /* Fondo claro */
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
-}
-
-/* Estilo para el encabezado general */
-.pdf-container h2 {
-    margin-bottom: 20px;
-    font-size: 24px;
-    color: var(--primary-color);
 }
 
 /* Contenedor para organizar los PDFs en columnas */
@@ -215,6 +206,12 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.pdf-item embed {
+    width: 100%;
+    height: 455px;
+    border-radius: 10px;
 }
 
 /* Títulos de los PDFs */
