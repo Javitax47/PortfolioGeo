@@ -1,58 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Práctica 10</title>
     <link rel="stylesheet" href="../css/practica.css">
+    <script src="../js/practica.js" defer></script>
 </head>
-
 <body>
-    <!-- Header desplegable -->
-    <div class="header-container">
-        <div class="header">
-            <button id="anterior" onclick="navigate(-1)">◄ Anterior</button>
-            <button onclick="goHome()" id="btn-inicio"><img src="../home-svgrepo-com.svg"></button>
-            <button id="siguiente" onclick="navigate(1)">Siguiente ►</button>
-        </div>
-        <div class="header-indicator">▼</div>
+<!-- Header desplegable -->
+<div class="header-container">
+    <div class="header">
+        <button id="anterior" onclick="navigate(-1)">◄ Anterior</button>
+        <button onclick="goHome()" id="btn-inicio"><img src="../home-svgrepo-com.svg" alt="Inicio"></button>
+        <button id="siguiente" disabled>Siguiente ►</button> <!-- Deshabilitado por ser la última práctica -->
     </div>
+    <div class="header-indicator">▼</div>
+</div>
 
-    <!-- Contenido de la práctica -->
-    <div class="content">
-        <div class="content-box" id="contenidoPractica">
-        </div>
+<!-- Contenido de la práctica -->
+<div class="content">
+    <div class="content-box" id="contenidoPractica">
+        <h1>Práctica 10</h1>
+        <p>Contenido de la práctica 10.</p>
     </div>
+</div>
 
-    <!-- Nombre y botón debajo del contenido -->
-    <div class="practice-info">
-        <span id="nombrePractica">Práctica 10</span>
-        <button onclick="descargarGuion()">Descargar Guión<img src="../download-minimalistic-svgrepo-com.svg"></button>
-    </div>
+<!-- Nombre y botón debajo del contenido -->
+<div class="practice-info">
+    <span id="nombrePractica">Práctica 10</span>
+    <button onclick="descargarGuion()">Descargar Guión<img src="../download-minimalistic-svgrepo-com.svg" alt="Descargar"></button>
+</div>
 
-    <script>
-        function navigate(step) {
-            if (step === -1) {
-                window.location.href = 'practica9.html'; // Práctica anterior
-            }
+<script>
+    function navigate(step) {
+        if (step === -1) {
+            window.location.href = 'practica9.html'; // Ir a la práctica 9
         }
+    }
 
+    function goHome() {
+        window.location.href = 'index.html';
+    }
 
-        function goHome() {
-            window.location.href = 'index.html';
-        }
-
-        // Descargar guion
-        function descargarGuion() {
-            const link = document.createElement('a');
-            link.href = `guiones/practica${numero}.pdf`;
-            link.download = `Practica${numero}_Guion.pdf`;
-            link.click();
-        }
-    </script>
-
-    <script src="../js/transition.js"></script>
+    function descargarGuion() {
+        const link = document.createElement('a');
+        link.href = '../guiones/practica10.pdf';
+        link.download = 'Guion_Practica_10.pdf';
+        link.click();
+    }
+</script>
 </body>
-
 </html>

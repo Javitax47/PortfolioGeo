@@ -170,3 +170,19 @@ body {
 .practice-info button:hover {
     background: var(--tertiary-color);
 }
+.header button:disabled {
+    background: #aaa; /* Un gris más oscuro */
+    color: #fff; /* Texto blanco para mejor contraste */
+    cursor: not-allowed; /* Cursor muestra que no es clicable */
+    opacity: 0.6; /* Hace que parezca "apagado" */
+    border: 1px solid #888; /* Agrega un borde suave */
+    box-shadow: none; /* Elimina cualquier sombra */
+    transition: all 0.3s ease; /* Transición suave */
+}
+
+/* Aplicamos una transición en botones para que la diferencia entre habilitado y deshabilitado sea suave */
+.header button {
+    transition: all 0.3s ease;
+}
+
+

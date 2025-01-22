@@ -1,58 +1,88 @@
-// Prácticas disponibles
-const practicasDisponibles = [1, 3, 4, 7, 8, 9, 10];
+// Lista de prácticas disponibles
+const practicasDisponibles = [
+    "practica1.html",
+    "practica3.html",
+    "practica4.html",
+    "practica7.html",
+    "practica8.html",
+    "practica9.html",
+    "practica10.html",
+];
 
-// Obtener el número de la práctica desde la URL
-const params = new URLSearchParams(window.location.search);
-const numero = parseInt(params.get('numero'), 10) || 1;
-const totalPracticas = practicasDisponibles.length;
+// Obtener el archivo actual
+const currentPage = window.location.pathname.split("/").pop();
 
-// Configuración inicial de contenido y navegación
-const practicaIndex = practicasDisponibles.indexOf(numero); // Posición de la práctica en el array
+// Obtener el índice de la práctica actual
+const practicaIndex = practicasDisponibles.indexOf(currentPage);
 
-// Mostrar contenido dinámico
-const nombrePracticaElement = document.getElementById('nombrePractica');
-if (nombrePracticaElement) {
-    nombrePracticaElement.innerText = `Práctica ${numero}`;
-}
-
-const h1Element = document.querySelector('#contenidoPractica h1');
-if (h1Element) {
-    h1Element.innerText = `Práctica ${numero}`;
-}
-
-const pElement = document.querySelector('#contenidoPractica p');
-if (pElement) {
-    pElement.innerText = `Contenido de la práctica ${numero}.`;
-}
-
+// Elementos del DOM
+const btnAnterior = document.getElementById("anterior");
+const btnSiguiente = document.getElementById("siguiente");
+const nombrePracticaElement = document.getElementById("nombrePractica");
+const h1Element = document.querySelector("#contenidoPractica h1");
+const pElement = document.querySelector("#contenidoPractica p");
 
 // Configurar botones de navegación
-const btnAnterior = document.getElementById('anterior');
-const btnSiguiente = document.getElementById('siguiente');
-
-if (practicaIndex <= 0) {
-    btnAnterior.disabled = true; // Deshabilitar "Anterior" en la primera práctica
-}
-
-if (practicaIndex >= totalPracticas - 1) {
-    btnSiguiente.disabled = true; // Deshabilitar "Siguiente" en la última práctica
-}
-
-function navigate(step) {
-    if ((practicaIndex + step >= 0) && (practicaIndex + step < totalPracticas)) {
-        const newNumero = practicasDisponibles[practicaIndex + step];
-        window.location.href = `practica.html?numero=${newNumero}`;
+if (btnAnterior) {
+    if (practicaIndex <= 0) {
+        // Deshabilitar "Anterior" si estamos en la primera práctica
+        btnAnterior.disabled = true;
+    } else {
+        // Configurar navegación a la práctica anterior
+        btnAnterior.addEventListener("click", () => {
+            window.location.href = practicasDisponibles[practicaIndex - 1];
+        });
     }
 }
 
-function goHome() {
-    window.location.href = 'index.html';
+if (btnSiguiente) {
+    if (practicaIndex >= practicasDisponibles.length - 1) {
+        // Deshabilitar "Siguiente" si estamos en la última práctica
+        btnSiguiente.disabled = true;
+    } else {
+        // Configurar navegación a la práctica siguiente
+        btnSiguiente.addEventListener("click", () => {
+            window.location.href = practicasDisponibles[practicaIndex + 1];
+        });
+    }
 }
 
-// Descargar guion
+// Configurar contenido dinámico
+if (nombrePracticaElement) {
+    const practicaNumero = currentPage
+        .replace("practica", "")
+        .replace(".html", "");
+    nombrePracticaElement.innerText = `Práctica ${practicaNumero}`;
+}
+
+if (h1Element) {
+    const practicaNumero = currentPage
+        .replace("practica", "")
+        .replace(".html", "");
+    h1Element.innerText = `Práctica ${practicaNumero}`;
+}
+
+if (pElement) {
+    const practicaNumero = currentPage
+        .replace("practica", "")
+        .replace(".html", "");
+    pElement.innerText = `Contenido de la práctica ${practicaNumero}.`;
+}
+
+// Función para volver a la página de inicio
+function goHome() {
+    window.location.href = "../html/index.html";
+}
+
+// Función para descargar el guion
 function descargarGuion() {
-    const link = document.createElement('a');
-    link.href = `guiones/practica${numero}.pdf`;
-    link.download = `Practica${numero}_Guion.pdf`;
+    const practicaNumero = currentPage
+        .replace("practica", "")
+        .replace(".html", "");
+    const guionFile = `../guiones/practica${practicaNumero}.pdf`;
+
+    const link = document.createElement("a");
+    link.href = guionFile;
+    link.download = `Guion_Practica_${practicaNumero}.pdf`;
     link.click();
 }

@@ -5,14 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Práctica 4</title>
     <link rel="stylesheet" href="../css/practica.css">
+    <script src="../js/practica.js"></script>
 </head>
 <body>
 <!-- Header desplegable -->
 <div class="header-container">
     <div class="header">
-            <button id="anterior" onclick="navigate(-1)">◄ Anterior</button>
-            <button onclick="goHome()" id="btn-inicio"><img src="../home-svgrepo-com.svg"></button>
-            <button id="siguiente" onclick="navigate(1)">Siguiente ►</button>
+        <button id="anterior" onclick="navigate(-1)">◄ Anterior</button>
+        <button onclick="goHome()" id="btn-inicio"><img src="../home-svgrepo-com.svg" alt="Inicio"></button>
+        <button id="siguiente" onclick="navigate(1)">Siguiente ►</button>
     </div>
     <div class="header-indicator">▼</div>
 </div>
@@ -20,37 +21,42 @@
 <!-- Contenido de la práctica -->
 <div class="content">
     <div class="content-box" id="contenidoPractica">
+        <h1>Práctica 4</h1>
+        <p>Contenido de la práctica 4.</p>
     </div>
 </div>
 
 <!-- Nombre y botón debajo del contenido -->
 <div class="practice-info">
     <span id="nombrePractica">Práctica 4</span>
-    <button onclick="descargarGuion()">Descargar Guión<img src="../download-minimalistic-svgrepo-com.svg"></button>
+    <button onclick="descargarGuion()">Descargar Guión <img src="../download-minimalistic-svgrepo-com.svg" alt="Descargar"></button>
 </div>
 
-    <script>
-        function navigate(step) {
-            if (step === -1) {
-                window.location.href = 'practica3.html'; // Práctica anterior
-            } else if (step === 1) {
-                window.location.href = 'practica6.html'; // Práctica siguiente
-            }
+<script>
+    // Función de navegación
+    function navigate(step) {
+        if (step === -1) {
+            // Navegar a la práctica anterior
+            window.location.href = 'practica3.html';
+        } else if (step === 1) {
+            // Navegar a la práctica siguiente
+            window.location.href = 'practica7.html'; // Corregido para ir a la práctica 7
         }
+    }
 
+    // Función para volver a la página de inicio
+    function goHome() {
+        window.location.href = '../html/index.html';
+    }
 
-        function goHome() {
-            window.location.href = 'index.html';
-        }
-
-        // Descargar guion
-        function descargarGuion() {
-            const link = document.createElement('a');
-            link.href = `guiones/practica${numero}.pdf`;
-            link.download = `Practica${numero}_Guion.pdf`;
-            link.click();
-        }
-    </script>
+    // Función para descargar el guion de la práctica
+    function descargarGuion() {
+        const link = document.createElement('a');
+        link.href = '../guiones/practica4.pdf'; // Guion de la práctica 4
+        link.download = 'Practica4_Guion.pdf';
+        link.click();
+    }
+</script>
 
 <script src="../js/transition.js"></script>
 </body>
