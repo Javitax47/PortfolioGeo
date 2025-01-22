@@ -7,4 +7,21 @@ html, body {
 .content-box {
     flex-grow: 1;
     position: relative;
+    flex-direction: row;
+}
+#map_c73c898b457255986a15b6156b2af45a {
+    position: relative;
+    width: 100.0%;
+    height: 100.0%;
+    left: 0.0%;
+    top: 0.0%;
+}
+.leaflet-container { font-size: 1rem; }
+#map_9f9a4d141dcc47e19cc3049159e8bcf7 {
+    position: relative;
+    width: 100.0%;
+    height: 100.0%;
+    left: 0.0%;
+    top: 0.0%;
+    margin-right: 15px;
 }
