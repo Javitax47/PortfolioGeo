@@ -11,9 +11,9 @@
 <!-- Header desplegable -->
 <div class="header-container">
     <div class="header">
-            <button id="anterior" onclick="navigate(-1)">◄ Anterior</button>
-            <button onclick="goHome()" id="btn-inicio"><img src="../home-svgrepo-com.svg"></button>
-            <button id="siguiente" onclick="navigate(1)">Siguiente ►</button>
+        <button id="anterior" onclick="navigate(-1)">◄ Anterior</button>
+        <button onclick="goHome()" id="btn-inicio"><img src="../home-svgrepo-com.svg" alt="Inicio"></button>
+        <button id="siguiente" onclick="navigate(1)">Siguiente ►</button>
     </div>
     <div class="header-indicator">▼</div>
 </div>
@@ -21,7 +21,7 @@
 <!-- Contenido de la práctica -->
 <div class="content">
     <div class="content-box" id="contenidoPractica">
-        <!-- PDF de PRECIPITACIONES -->
+     <!-- PDF de PRECIPITACIONES -->
         <div class="pdf-container">
             <div class="pdf-columns">
                 <!-- PDF de PRECIPITACIONES -->
@@ -29,7 +29,7 @@
                     <h3>Mapa de Precipitaciones</h3>
                     <embed src="../guiones/PRECIPITACIONES.pdf" type="application/pdf">
                 </div>
-
+        
                 <!-- PDF de TEMPERATURAS -->
                 <div class="pdf-item">
                     <h3>Mapa de Temperaturas</h3>
@@ -37,37 +37,51 @@
                 </div>
             </div>
         </div>
+        
     </div>
 </div>
 
 <!-- Nombre y botón debajo del contenido -->
 <div class="practice-info">
     <span id="nombrePractica">Práctica 3</span>
-    <button onclick="descargarGuion()">Descargar Guión<img src="../download-minimalistic-svgrepo-com.svg"></button>
+    <button onclick="descargarGuion()">Descargar Guión <img src="../download-minimalistic-svgrepo-com.svg" alt="Descargar"></button>
 </div>
 
-    <script>
-        function navigate(step) {
-            if (step === -1) {
-                window.location.href = 'practica1.html'; // Práctica anterior
-            } else if (step === 1) {
-                window.location.href = 'practica4.html'; // Práctica siguiente
-            }
-        }
+<script>
+    // Función para descargar el archivo 3_TEMATICO_RASTER.pdf
+    function descargarGuion() {
+        const link = document.createElement('a');
+        link.href = '../guiones/3_TEMATICO_RASTER.pdf'; // Ruta al archivo PDF
+        link.download = '3_TEMATICO_RASTER.pdf'; // Nombre del archivo al descargar
+        link.click(); // Ejecuta la descarga
+    }
+</script>
 
 
-        function goHome() {
-            window.location.href = 'index.html';
+<script>
+    // Función de navegación
+    function navigate(step) {
+        if (step === -1) {
+            // Navegar a la práctica anterior
+            window.location.href = 'practica1.html';
+        } else if (step === 1) {
+            // Navegar a la práctica siguiente
+            window.location.href = 'practica4.html'; // Ir a la práctica 7
         }
+    }
 
-        // Descargar guion
-        function descargarGuion() {
-            const link = document.createElement('a');
-            link.href = `guiones/practica${numero}.pdf`;
-            link.download = `Practica${numero}_Guion.pdf`;
-            link.click();
-        }
-    </script>
+    // Función para volver a la página de inicio
+    function goHome() {
+        window.location.href = '../html/index.html';
+    }
+
+    function descargarGuion() {
+        const link = document.createElement('a');
+        link.href = '../guiones/practica3.pdf';
+        link.download = 'Guion_Practica_3.pdf';
+        link.click();
+    }
+</script>
 
 <script src="../js/transition.js"></script>
 </body>
