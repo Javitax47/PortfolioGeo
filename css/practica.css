@@ -185,4 +185,44 @@ body {
     transition: all 0.3s ease;
 }
 
+/* Contenedor general para los PDFs */
+.pdf-container {
+    margin-top: 20px;
+    text-align: center;
+    padding: 10px;
+    background: #f4f4f4; /* Fondo claro */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* Estilo para el encabezado general */
+.pdf-container h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: var(--primary-color);
+}
+
+/* Contenedor para organizar los PDFs en columnas */
+.pdf-columns {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Espacio entre las columnas */
+}
+
+/* Cada PDF ocupa su propia columna */
+.pdf-item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Títulos de los PDFs */
+.pdf-item h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: var(--secondary-color);
+}
+
+
 
