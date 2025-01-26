@@ -71,7 +71,7 @@ if (pElement) {
 
 // Función para volver a la página de inicio
 function goHome() {
-    window.location.href = "../html/index.html";
+    window.location.href = "../index.html";
 }
 
 // Función para descargar el guion
